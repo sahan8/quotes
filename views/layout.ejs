@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<style>
+
+    .hd{
+        text-align: center;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    /* Style the select element */
+    .custom-select {
+            background-color: #e0eff1;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        /* Style the selected option */
+        .custom-select option {
+            background-color: #2de7de;
+            color: #ffffff;
+        }
+
+        .xxx{
+            padding-top: 70px;
+        }
+
+        .yyy{
+            margin-left: 600px;
+            margin-bottom: 50px;
+            margin-top: 25px;
+            
+        }
+
+        .container-fluid{
+            background-image: linear-gradient(rgb(180, 118, 231), rgb(86, 241, 192));
+            height: 100vh;
+        }
+</style>
+
+</head>
+<body>
+    <div class="container-fluid">
+    <h1 class="hd" style="color: rgb(1, 59, 59);">Qutes For You</h1>
+    <form action="/quotes" method="post">
+        <div class="container mt-5 xxx">
+            <div class="form-group">
+                <label for="selectOption">Select category:</label>
+                <select class="custom-select" id="selectOption" name="category">
+                    <option value="love">love</option>
+                    <option value="art">art</option>
+                    <option value="beauty">beauty</option>
+                    <option value="business">business</option>
+                    <option value="cool">cool</option>
+                    <option value="dreams">dreams</option>
+                    <option value="education">education</option>
+                    <option value="friendship">friendship</option>
+                    <option value="future">future</option>
+                    <option value="home">home</option>
+                    <option value="life">life</option>
+                    <option value="money">money</option>
+                    <option value="success">success</option>
+                </select>
+            </div>
+        </div>
+        <!-- <input class="yyy" type="submit" name="search" > -->
+        <button type="submit" class="btn btn-outline-primary yyy" name="search">search</button>
+    </form>
+<div class="container-md">
+    <div class="card">
+        <div class="card-header">
+          Quote
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><%- quote %></p>
+            <footer class="blockquote-footer"><%- author %> </footer>
+          </blockquote>
+        </div>
+      </div>
+
+</div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
